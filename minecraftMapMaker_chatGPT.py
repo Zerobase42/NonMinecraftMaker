@@ -91,7 +91,7 @@ locations[0:4] = bytes([
 
 region_data = bytes(locations) + bytes(timestamps) + chunk_payload_padded
 
-out_path = Path("r.0.0.mca")
+out_path = Path(__file__).with_name("r.0.0.mca")
 out_path.write_bytes(region_data)
 
 print(f"Created minimal Minecraft region file: {out_path}")
